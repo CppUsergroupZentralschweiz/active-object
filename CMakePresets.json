@@ -1,0 +1,21 @@
+{
+    "version": 6,
+    "configurePresets": [
+        {
+            "name": "clang",
+            "displayName": "Clang Ninja",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/_build/clang",
+            "toolchainFile": "${sourceDir}/cmake/toolchain.cmake",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "clang",
+            "configurePreset": "clang"
+        }
+    ]
+}
